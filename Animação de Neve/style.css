@@ -1,0 +1,72 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+height: 100vh;
+padding-top: 30px;
+background-color: #000000;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+}
+.cloud {
+position: relative;
+display: flex;
+align-items: flex-end;
+justify-content: center;
+}
+.cloud > * {
+background-color: white;
+border-top-right-radius: 50%;
+border-top-left-radius: 50%;
+}
+.cloud > :nth-child(1),
+.cloud > :nth-child(3) {
+height: 30px;
+width: 80px;
+}
+.cloud > :nth-child(1) {
+height: 60px;
+border-radius: 50%;
+margin-right: -14%;
+}
+.cloud > :nth-child(3) {
+height: 75px;
+border-radius: 50%;
+margin-left: -15%;
+margin-bottom: 2%;
+}
+.cloud > :nth-child(2) {
+width: 150px;
+height: 100px;
+border-radius: 50%;
+}
+@media (max-width: 650px) {
+.cloud > :nth-child(2) {
+width: 100px;
+height: 90px;
+}
+}
+.snowflake-area {
+left: 0;
+bottom: 15%;
+width: 100%;
+position: absolute;
+}
+.snowflake {
+position: absolute;
+top: 20%;
+background-color: snow;
+border-radius: 50%;
+aspect-ratio: 1;
+}
+@keyframes fall {
+0% {
+transform: translateY(0);
+}
+100% {
+transform: translateY(calc(100vh));
+}
+}
